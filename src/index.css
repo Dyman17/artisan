@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  /* ARTISAN palette — взято с artisan.education */
+  --color-artisan: #10b981;
+  --color-artisan-deep: #0a1931;
+  --color-artisan-mist: #ecfdf5;
+  --color-artisan-line: #d1fae5;
+  --color-ink: #0a1931;
+  --color-paper: #f5f6f8;
+}
+
+html { scroll-behavior: smooth; }
+body { background: #f5f6f8; color: #0a1931; -webkit-font-smoothing: antialiased; }
+
+::selection { background: #10b981; color: #fff; }
+
+/* thin scrollbar */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-thumb { background: #D6D3D1; border-radius: 99px; }
+
+/* dotted grid как на artisan.education */
+.blueprint {
+  background-image: radial-gradient(rgba(16,185,129,.22) 1px, transparent 1px);
+  background-size: 22px 22px;
+}
+
+.scanline {
+  background: linear-gradient(180deg, transparent, rgba(28,25,23,.08), transparent);
+  animation: scan 2.2s linear infinite;
+}
+@keyframes scan {
+  0% { top: 0%; } 100% { top: 100%; }
+}
+
+.bbox {
+  animation: pop .35s cubic-bezier(.2,.9,.3,1.2) both;
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.fade-up { animation: fadeUp .5s ease both; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
