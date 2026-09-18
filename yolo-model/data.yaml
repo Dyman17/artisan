@@ -1,0 +1,21 @@
+# 12 классов — имена ДОЛЖНЫ совпадать с src/data.js (id)
+names:
+  0: arduino_uno
+  1: esp32
+  2: hcsr04
+  3: sg90
+  4: dht11
+  5: oled_ssd1306
+  6: neopixel
+  7: buzzer
+  8: button
+  9: ldr
+  10: pir
+  11: dcmotor_l293d
+
+# Roboflow export клади сюда:
+train: ./datasets/train/images
+val: ./datasets/val/images
+test: ./datasets/test/images
+
+nc: 12
